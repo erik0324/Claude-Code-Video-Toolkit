@@ -16,7 +16,7 @@ export const DAUER_01 = GESAMT + 45;
 
 const SZENEN: [string, React.FC<{ schlaege: number }>][] = [
   ['hook', S1Hook], ['kapitelkarte', S2Karte], ['grundbegriffe', S3Grundbegriffe], ['achsen', S4Achsen],
-  ['schnittpunkte', S5Schnittpunkte], ['fehlerfalle', S6Fehlerfalle], ['ballwurf', S7Ballwurf], ['abiaufgabe', S7bAbiAufgabe], ['abikarte', S7cAbiKarte], ['abschluss', S8Abschluss],
+  ['schnittpunkte', S5Schnittpunkte], ['fehlerfalle', S6Fehlerfalle], ['ballwurf', S7Ballwurf], ['abikarte', S7cAbiKarte], ['abiaufgabe', S7bAbiAufgabe], ['abschluss', S8Abschluss],
 ];
 
 /** Video 0.1 ohne Sprecher: Animation und Musik. Jede Szene beginnt auf einer Taktgrenze (siehe timing.json). */

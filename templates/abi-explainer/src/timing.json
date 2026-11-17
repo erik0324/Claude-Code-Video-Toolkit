@@ -47,15 +47,15 @@
    "stil": "F"
   },
   {
-   "name": "abiaufgabe",
+   "name": "abikarte",
    "startBar": 82,
-   "bars": 28,
+   "bars": 7,
    "stil": "I"
   },
   {
-   "name": "abikarte",
-   "startBar": 110,
-   "bars": 7,
+   "name": "abiaufgabe",
+   "startBar": 89,
+   "bars": 28,
    "stil": "I"
   },
   {

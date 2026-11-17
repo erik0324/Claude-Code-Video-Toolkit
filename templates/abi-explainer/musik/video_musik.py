@@ -14,7 +14,7 @@ p = M.plan(lek)
 # Teile des Skripts in Takten (Skript-Zeiten auf Taktgrenzen gerundet); Stil je Teil nach Video-Stil
 TEILE = [('hook', 3, 'G'), ('kapitelkarte', 2, 'G'), ('grundbegriffe', 19, 'I'), ('achsen', 20, 'I'),
          ('schnittpunkte', 18, 'I'), ('fehlerfalle', 6, 'I'), ('ballwurf', 14, 'F'),
-         ('abiaufgabe', 28, 'I'), ('abikarte', 7, 'I'), ('abschluss', 6, 'G')]
+         ('abikarte', 7, 'I'), ('abiaufgabe', 28, 'I'), ('abschluss', 6, 'G')]
 secs = []
 for name, bars, st in TEILE:
     if secs and secs[-1][0] == st: secs[-1][1] += bars

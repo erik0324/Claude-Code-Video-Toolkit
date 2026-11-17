@@ -42,7 +42,7 @@ export const S7cAbiKarte: React.FC<{ schlaege: number }> = ({ schlaege }) => {
           })}
           <div style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: `${CQ(1)}px ${CQ(1.2)}px` }}>
             <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: CQ(0.12), background: C.tinte, transform: `scaleX(${auf(s, 14.5, 0.5)})`, transformOrigin: 'left' }} />
-            <Auf a={15}><span style={{ font: `600 ${CQ(1.15)}px ${FONT}`, letterSpacing: '0.07em', textTransform: 'uppercase', color: C.label }}>Gesamt · im E-Book als Ü 0.1.5 bis 0.1.8 mit Lösungswegen</span></Auf>
+            <Auf a={15}><span style={{ font: `600 ${CQ(1.15)}px ${FONT}`, letterSpacing: '0.07em', textTransform: 'uppercase', color: C.label }}>Gesamt · gleich vorgerechnet, im E-Book als Ü 0.1.5 bis 0.1.8</span></Auf>
             <Auf a={15.3}><span style={{ font: `800 ${CQ(2.3)}px ${FONT}` }}>12</span> <span style={{ font: `600 ${CQ(0.9)}px ${FONT}`, color: C.label }}>BE</span></Auf>
           </div>
         </div>
