@@ -1,0 +1,25 @@
+{
+  "name": "abi-explainer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Erklärvideos der Abi-Lernplattform (Swiss Motion, Fachfarbe als Signal, Musik aus musik/musik.py)",
+  "scripts": {
+    "studio": "remotion studio",
+    "musik": "python3 musik/video_musik.py",
+    "render": "remotion render Video01 out/video-0-1.mp4",
+    "still": "remotion still Video01 out/still.png"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.1.0",
+    "@remotion/cli": "4.0.529",
+    "katex": "0.16.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.529"
+  },
+  "devDependencies": {
+    "@types/katex": "0.16.7",
+    "@types/react": "18.3.11",
+    "typescript": "5.6.3"
+  }
+}

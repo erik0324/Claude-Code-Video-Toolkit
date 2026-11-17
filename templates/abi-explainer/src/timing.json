@@ -1,0 +1,57 @@
+{
+ "lektion": "0.1",
+ "bpm": 84,
+ "key": "D",
+ "mode": "dur",
+ "teile": [
+  {
+   "name": "hook",
+   "startBar": 0,
+   "bars": 3,
+   "stil": "G"
+  },
+  {
+   "name": "kapitelkarte",
+   "startBar": 3,
+   "bars": 2,
+   "stil": "G"
+  },
+  {
+   "name": "grundbegriffe",
+   "startBar": 5,
+   "bars": 19,
+   "stil": "I"
+  },
+  {
+   "name": "achsen",
+   "startBar": 24,
+   "bars": 20,
+   "stil": "I"
+  },
+  {
+   "name": "schnittpunkte",
+   "startBar": 44,
+   "bars": 18,
+   "stil": "I"
+  },
+  {
+   "name": "fehlerfalle",
+   "startBar": 62,
+   "bars": 6,
+   "stil": "I"
+  },
+  {
+   "name": "ballwurf",
+   "startBar": 68,
+   "bars": 14,
+   "stil": "F"
+  },
+  {
+   "name": "abschluss",
+   "startBar": 82,
+   "bars": 6,
+   "stil": "G"
+  }
+ ],
+ "totalBars": 88
+}
