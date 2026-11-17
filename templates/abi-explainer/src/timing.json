@@ -49,21 +49,21 @@
   {
    "name": "abiaufgabe",
    "startBar": 82,
-   "bars": 16,
+   "bars": 28,
    "stil": "I"
   },
   {
    "name": "abikarte",
-   "startBar": 98,
+   "startBar": 110,
    "bars": 5,
    "stil": "I"
   },
   {
    "name": "abschluss",
-   "startBar": 103,
+   "startBar": 115,
    "bars": 6,
    "stil": "G"
   }
  ],
- "totalBars": 109
+ "totalBars": 121
 }

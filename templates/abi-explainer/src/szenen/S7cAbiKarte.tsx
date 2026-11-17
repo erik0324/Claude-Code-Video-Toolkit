@@ -17,7 +17,7 @@ export const S7cAbiKarte: React.FC<{ schlaege: number }> = ({ schlaege }) => {
             </div>
             <Auf a={0.6} block><div style={{ font: `900 ${CQ(7.8)}px/0.95 ${FONT}`, letterSpacing: '-0.04em' }}>Berechne</div></Auf>
             <div style={{ position: 'absolute', left: CQ(5), bottom: CQ(4) }}>
-              <Auf a={1.4}><span style={{ font: `700 ${CQ(2)}px ${FONT}` }}>3 BE · AFB I</span></Auf>
+              <Auf a={1.4}><span style={{ font: `700 ${CQ(2)}px ${FONT}` }}>Teil c · 4 BE · AFB II</span></Auf>
             </div>
           </div>
           <div style={{ padding: `${CQ(9)}px ${CQ(5)}px ${CQ(4)}px ${CQ(4)}px`, font: `500 ${CQ(1.9)}px/1.45 ${FONT}` }}>
@@ -26,7 +26,7 @@ export const S7cAbiKarte: React.FC<{ schlaege: number }> = ({ schlaege }) => {
             <Auf a={6} block><div style={{ marginTop: CQ(1), color: C.tinte2 }}>Bei „Bestimme“ dürfen sie genutzt werden.</div></Auf>
             <div style={{ height: CQ(3) }} />
             <Lbl a={10}>Im E-Book</Lbl>
-            <Auf a={10.5} block><div style={{ marginTop: CQ(0.8) }}>Ü 0.1.4 · Schnittstellen berechnen</div></Auf>
+            <Auf a={10.5} block><div style={{ marginTop: CQ(0.8) }}>Ü 0.1.5 bis 0.1.8 · die ganze Aufgabe zum Üben</div></Auf>
           </div>
         </div>
       </Abgang>
