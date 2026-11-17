@@ -1,30 +1,36 @@
-import { Abgang, Auf, Grund, Tex } from '../bausteine/Teile';
-import { C, FONT, RAND } from '../bausteine/stil';
-import { auf, useSchlag, zeichne } from '../bausteine/zeit';
+import { Abgang, Auf, Cap, Em, Grund, Tex } from '../bausteine/Teile';
+import { C, CQ, FONT } from '../bausteine/stil';
+import { auf, useSchlag } from '../bausteine/zeit';
 
-/** Fehlerfalle: ohne Rot. Der falsche Weg wird durchgeschnitten und grau, der richtige kommt in Fachfarbe. */
+const K: React.FC<{ children: React.ReactNode; a: number; style?: React.CSSProperties }> = ({ children, a, style }) => (
+  <Auf a={a} block style={style}><div style={{ font: `600 ${CQ(1.3)}px ${FONT}`, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.label }}>{children}</div></Auf>
+);
+
+/** Fehlerfalle mit Messerschnitt (Video-Stil .trap): kein Rot. Der falsche Weg wird durchgeschnitten und grau. */
 export const S6Fehlerfalle: React.FC<{ schlaege: number }> = ({ schlaege }) => {
   const s = useSchlag();
-  const grau = auf(s, 6.4, 0.5);
-  const schnitt = zeichne(s, 6, 0.35);
+  const messer = auf(s, 6, 0.4);
+  const blass = auf(s, 6.6, 0.5);
   return (
-    <Grund>
+    <Grund meta="Typische Fehlerquelle">
       <Abgang schlaege={schlaege}>
-        <div style={{ position: 'absolute', left: RAND, top: 150 }}>
-          <Auf a={0}><div style={{ font: `700 22px ${FONT}`, letterSpacing: '0.08em', textTransform: 'uppercase', color: C.tinte2, border: `2px solid ${C.tinte2}`, borderRadius: 999, padding: '8px 20px' }}>Fehlerfalle</div></Auf>
+        <div style={{ position: 'absolute', left: CQ(5), top: CQ(12), right: CQ(5) }}>
+          <K a={0}>So nicht</K>
+          <div style={{ opacity: 1 - 0.72 * blass, marginTop: CQ(1.4) }}>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <Auf a={1}><Tex tex="2x^2 - 4x - 6 = 0 \;\Rightarrow\; x_{1,2} = 2 \pm \sqrt{4 + 6}" size={CQ(3.8)} style={{ whiteSpace: 'nowrap' }} /></Auf>
+              <div style={{ position: 'absolute', left: '-2%', top: '52%', height: CQ(0.35), width: '104%', background: C.tinte, transform: `scaleX(${messer})`, transformOrigin: 'left' }} />
+            </div>
+          </div>
+          <K a={9} style={{ marginTop: CQ(4) }}>Sondern · erst durch 2 teilen</K>
+          <div style={{ marginTop: CQ(1.4) }}>
+            <Auf a={10.5}><Tex tex="x^2 - 2x - 3 = 0 \;\Rightarrow\; x_{1,2} = 1 \pm 2" size={CQ(3.8)} color={C.fach} style={{ whiteSpace: 'nowrap' }} /></Auf>
+          </div>
         </div>
-        <div style={{ position: 'absolute', left: RAND, top: 330, display: 'flex', alignItems: 'center', gap: 40 }}>
-          <Auf a={1}><Tex tex="2x^2 - 4x - 6 = 0" size={92} color={grau > 0.5 ? C.grau : C.tinte} /></Auf>
-          <Auf a={3}><div style={{ font: `600 46px ${FONT}`, color: grau > 0.5 ? C.grau : C.tinte2 }}>→ pq-Formel direkt</div></Auf>
-          <svg style={{ position: 'absolute', left: -20, top: 0, overflow: 'visible' }} width={1500} height={140}>
-            {schnitt > 0 && <line x1={0} y1={96} x2={1500 * schnitt} y2={40} stroke={C.tinte} strokeWidth={6} strokeLinecap="round" />}
-          </svg>
-        </div>
-        <div style={{ position: 'absolute', left: RAND, top: 560 }}>
-          <Auf a={9} block><div style={{ font: `700 40px ${FONT}`, color: C.tinte }}>Erst durch 2 teilen:</div></Auf>
-          <Auf a={10.5} block><Tex tex="x^2 - 2x - 3 = 0" size={92} color={C.fach} /></Auf>
-          <Auf a={14} block><div style={{ font: `500 34px ${FONT}`, color: C.tinte2, marginTop: 24 }}>Die pq-Formel gilt nur, wenn vor <i>x</i>² eine 1 steht.</div></Auf>
-        </div>
+        <Cap rechts={CQ(20)} saetze={[
+          { a: 2, aus: 8.5, text: <>Die pq-Formel direkt? Das kostet im Abi <Em>Punkte</Em>.</> },
+          { a: 13, aus: schlaege, text: <>Die pq-Formel gilt nur, wenn vor <i>x</i>² eine <Em>1</Em> steht.</> },
+        ]} />
       </Abgang>
     </Grund>
   );
