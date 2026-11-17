@@ -47,11 +47,23 @@
    "stil": "F"
   },
   {
-   "name": "abschluss",
+   "name": "abiaufgabe",
    "startBar": 82,
+   "bars": 16,
+   "stil": "I"
+  },
+  {
+   "name": "abikarte",
+   "startBar": 98,
+   "bars": 5,
+   "stil": "I"
+  },
+  {
+   "name": "abschluss",
+   "startBar": 103,
    "bars": 6,
    "stil": "G"
   }
  ],
- "totalBars": 88
+ "totalBars": 109
 }

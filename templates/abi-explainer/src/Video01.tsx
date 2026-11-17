@@ -8,13 +8,15 @@ import { S4Achsen } from './szenen/S4Achsen';
 import { S5Schnittpunkte } from './szenen/S5Schnittpunkte';
 import { S6Fehlerfalle } from './szenen/S6Fehlerfalle';
 import { S7Ballwurf } from './szenen/S7Ballwurf';
+import { S7bAbiAufgabe } from './szenen/S7bAbiAufgabe';
+import { S7cAbiKarte } from './szenen/S7cAbiKarte';
 import { S8Abschluss } from './szenen/S8Abschluss';
 
 export const DAUER_01 = GESAMT + 45;
 
 const SZENEN: [string, React.FC<{ schlaege: number }>][] = [
   ['hook', S1Hook], ['kapitelkarte', S2Karte], ['grundbegriffe', S3Grundbegriffe], ['achsen', S4Achsen],
-  ['schnittpunkte', S5Schnittpunkte], ['fehlerfalle', S6Fehlerfalle], ['ballwurf', S7Ballwurf], ['abschluss', S8Abschluss],
+  ['schnittpunkte', S5Schnittpunkte], ['fehlerfalle', S6Fehlerfalle], ['ballwurf', S7Ballwurf], ['abiaufgabe', S7bAbiAufgabe], ['abikarte', S7cAbiKarte], ['abschluss', S8Abschluss],
 ];
 
 /** Video 0.1 ohne Sprecher: Animation und Musik. Jede Szene beginnt auf einer Taktgrenze (siehe timing.json). */

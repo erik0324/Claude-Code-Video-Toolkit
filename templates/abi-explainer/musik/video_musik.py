@@ -13,7 +13,8 @@ lek = sys.argv[1] if len(sys.argv) > 1 else '0.1'
 p = M.plan(lek)
 # Teile des Skripts in Takten (Skript-Zeiten auf Taktgrenzen gerundet); Stil je Teil nach Video-Stil
 TEILE = [('hook', 3, 'G'), ('kapitelkarte', 2, 'G'), ('grundbegriffe', 19, 'I'), ('achsen', 20, 'I'),
-         ('schnittpunkte', 18, 'I'), ('fehlerfalle', 6, 'I'), ('ballwurf', 14, 'F'), ('abschluss', 6, 'G')]
+         ('schnittpunkte', 18, 'I'), ('fehlerfalle', 6, 'I'), ('ballwurf', 14, 'F'),
+         ('abiaufgabe', 16, 'I'), ('abikarte', 5, 'I'), ('abschluss', 6, 'G')]
 secs = []
 for name, bars, st in TEILE:
     if secs and secs[-1][0] == st: secs[-1][1] += bars
