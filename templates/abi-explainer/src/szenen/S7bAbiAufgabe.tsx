@@ -81,11 +81,12 @@ export const S7bAbiAufgabe: React.FC<{ schlaege: number }> = ({ schlaege }) => {
           <>
             <Teil a={P.c} aus={P.d - 0.6} buchstabe="c" be={4} text={<><b>Berechne</b> die Koordinaten der Schnittpunkte der Graphen von <i>f</i> und <i>g</i>.</>} />
             <div style={{ position: 'absolute', left: RAND, top: CQ(17) }}>
-              <Schritt n={1} a={P.c + 2} aus={P.d - 0.6} tex="0{,}5x^2 - 2x - 6 = x + 2" size={GR} grau={P.c + 6} />
-              <Schritt n={2} a={P.c + 6} aus={P.d - 0.6} tex="x^2 - 6x - 16 = 0" size={GR} grau={P.c + 11} />
-              <Schritt n={3} a={P.c + 11} aus={P.d - 0.6} tex="x_{1,2} = 3 \pm \sqrt{9 + 16} = 3 \pm 5" size={GR} grau={P.c + 16} />
-              <Schritt n={4} a={P.c + 16} aus={P.d - 0.6} tex="g(-2) = 0, \quad g(8) = 10" size={GR} grau={P.c + 20} />
-              <Schritt n={5} a={P.c + 20} aus={P.d - 0.6} tex="S_1(-2 \mid 0), \quad S_2(8 \mid 10)" size={GR} fach />
+              <Schritt n={1} a={P.c + 2} aus={P.d - 0.6} tex="0{,}5x^2 - 2x - 6 = x + 2" size={GR} grau={P.c + 5} />
+              <Schritt n={2} a={P.c + 5} aus={P.d - 0.6} tex="0{,}5x^2 - 3x - 8 = 0 \quad \mid \cdot 2" size={GR} grau={P.c + 9} />
+              <Schritt n={3} a={P.c + 9} aus={P.d - 0.6} tex="x^2 - 6x - 16 = 0" size={GR} grau={P.c + 13} />
+              <Schritt n={4} a={P.c + 13} aus={P.d - 0.6} tex="x_{1,2} = 3 \pm \sqrt{9 + 16} = 3 \pm 5" size={GR} grau={P.c + 17} />
+              <Schritt n={5} a={P.c + 17} aus={P.d - 0.6} tex="g(-2) = 0, \quad g(8) = 10" size={GR} grau={P.c + 20} />
+              <Schritt n={6} a={P.c + 20} aus={P.d - 0.6} tex="S_1(-2 \mid 0), \quad S_2(8 \mid 10)" size={GR} fach />
             </div>
           </>
         )}
@@ -95,11 +96,12 @@ export const S7bAbiAufgabe: React.FC<{ schlaege: number }> = ({ schlaege }) => {
           <>
             <Teil a={P.d} aus={schlaege} buchstabe="d" be={3} text={<><b>Bestimme</b> <i>b</i> so, dass <Tex tex="h_b(x) = x + b" size={CQ(1.9)} /> den Graphen von <i>f</i> berührt.</>} />
             <div style={{ position: 'absolute', left: RAND, top: CQ(17) }}>
-              <Schritt n={1} a={P.d + 2} tex="0{,}5x^2 - 2x - 6 = x + b" size={GR} grau={P.d + 6} />
-              <Schritt n={2} a={P.d + 6} tex="x^2 - 6x - 12 - 2b = 0" size={GR} grau={P.d + 10} />
-              <Schritt n={3} a={P.d + 10} tex="x_{1,2} = 3 \pm \sqrt{21 + 2b}" size={GR} grau={P.d + 15} />
-              <Schritt n={4} a={P.d + 15} tex="21 + 2b = 0 \iff b = -10{,}5" size={GR} grau={P.d + 19} />
-              <Schritt n={5} a={P.d + 19} tex="B(3 \mid -7{,}5)" size={GR} fach />
+              <Schritt n={1} a={P.d + 2} tex="0{,}5x^2 - 2x - 6 = x + b" size={GR} grau={P.d + 5} />
+              <Schritt n={2} a={P.d + 5} tex="0{,}5x^2 - 3x - 6 - b = 0 \quad \mid \cdot 2" size={GR} grau={P.d + 8} />
+              <Schritt n={3} a={P.d + 8} tex="x^2 - 6x - 12 - 2b = 0" size={GR} grau={P.d + 11} />
+              <Schritt n={4} a={P.d + 11} tex="x_{1,2} = 3 \pm \sqrt{21 + 2b}" size={GR} grau={P.d + 15} />
+              <Schritt n={5} a={P.d + 15} tex="21 + 2b = 0 \iff b = -10{,}5" size={GR} grau={P.d + 19} />
+              <Schritt n={6} a={P.d + 19} tex="h_b(3) = 3 - 10{,}5 = -7{,}5 \;\Rightarrow\; B(3 \mid -7{,}5)" size={GR} fach />
             </div>
           </>
         )}
@@ -131,8 +133,8 @@ export const S7bAbiAufgabe: React.FC<{ schlaege: number }> = ({ schlaege }) => {
           { a: 8, aus: P.a - 0.6, lead: 'Vier Teile, ein Thema', text: <>Jede Teilaufgabe nutzt ein Werkzeug aus <Em>dieser Lektion</Em>.</> },
           { a: P.a + 6, aus: P.a + 12.5, lead: 'Scheitel', text: <>Bei nach oben offener Parabel ist der Scheitel der <Em>tiefste Punkt</Em>.</> },
           { a: P.b + 7, aus: P.b + 13.5, lead: 'Erst normieren', text: <>Vor <i>x</i>² muss eine <Em>1</Em> stehen, also mal 2.</> },
-          { a: P.c + 21, aus: P.d - 0.6, lead: 'Deutung', text: <><Em>S₁</Em> ist zugleich die Nullstelle N₁ aus Teil b.</> },
-          { a: P.d + 11, aus: P.d + 18.5, lead: 'Berühren', text: <>Genau ein Punkt heißt: <Em>null</Em> unter der Wurzel.</> },
+          { a: P.c + 21.5, aus: P.d - 0.6, lead: 'Deutung', text: <><Em>S₁</Em> ist zugleich die Nullstelle N₁ aus Teil b.</> },
+          { a: P.d + 12, aus: P.d + 18.5, lead: 'Berühren', text: <>Genau ein Punkt heißt: <Em>null</Em> unter der Wurzel.</> },
           { a: P.d + 20, aus: schlaege, lead: 'Antwortsatz', text: <>Für <Em>b = −10,5</Em> berührt die Gerade in <Em>B(3 | −7,5)</Em>.</> },
         ]} />
       </Abgang>
