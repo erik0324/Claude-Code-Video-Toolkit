@@ -55,15 +55,15 @@
   {
    "name": "abikarte",
    "startBar": 110,
-   "bars": 5,
+   "bars": 7,
    "stil": "I"
   },
   {
    "name": "abschluss",
-   "startBar": 115,
+   "startBar": 117,
    "bars": 6,
    "stil": "G"
   }
  ],
- "totalBars": 121
+ "totalBars": 123
 }
